@@ -3,7 +3,7 @@ FROM maven:3.5.4-jdk-8 AS stage-atlas
 ENV ATLAS_VERSION "3.0.0-e44eb9d64"
 ENV TARBALL apache-atlas-${ATLAS_VERSION}-sources.tar.gz
 ENV	ATLAS_REPO      https://dist.apache.org/repos/dist/release/atlas/${ATLAS_VERSION}/${TARBALL}
-ENV	MAVEN_OPTS	"-Xms2g -Xmx2g"
+ENV	MAVEN_OPTS	"-Xms4g -Xmx4g"
 
 RUN git clone http://github.com/apache/atlas.git \
 	&& cd atlas \
